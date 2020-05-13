@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.MovieActivity">
+
+        <ImageView
+            android:id="@+id/activity_movie_image_view_backdrop_path"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_background"
+            app:layout_constraintDimensionRatio="h,16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/activity_movie_toolbar"
+            style="@style/Toolbar"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/activity_movie_image_view_play"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/play_button"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_movie_image_view_backdrop_path"
+            app:layout_constraintEnd_toEndOf="@+id/activity_movie_image_view_backdrop_path"
+            app:layout_constraintStart_toStartOf="@+id/activity_movie_image_view_backdrop_path"
+            app:layout_constraintTop_toTopOf="@+id/activity_movie_image_view_backdrop_path"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/activity_movie_image_view_vote_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/activity_movie_text_view_title"
+            app:layout_constraintStart_toStartOf="@+id/activity_movie_text_view_title"
+            app:srcCompat="@drawable/ic_star_24dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/activity_my_list_text_view_vote_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/activity_movie_text_view_title"
+            app:layout_constraintStart_toEndOf="@+id/activity_movie_image_view_vote_average"
+            tools:ignore="MissingConstraints"
+            tools:text="7.5" />
+
+        <TextView
+            android:id="@+id/activity_movie_text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="22dp"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/activity_movie_image_view_backdrop_path"
+            app:layout_constraintStart_toStartOf="@id/activity_movie_image_view_backdrop_path"
+            tools:ignore="MissingConstraints"
+            tools:text="Título do Filme" />
+
+        <TextView
+            android:id="@+id/activity_movie_text_view_desc"
+            style="@style/TextViewMovie"
+            android:ellipsize="end"
+            android:lineSpacingExtra="3dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_movie_image_view_backdrop_path"
+            tools:ignore="MissingConstraints"
+            tools:text="Descrição do filme" />
+
+        <TextView
+            android:id="@+id/activity_movie_similar_movies"
+            style="@style/TextViewMovie"
+            android:text="@string/similar_options"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_movie_button_share"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/activity_movie_button_favorite"
+            style="@style/ButtonMovie"
+            android:drawableTop="@drawable/ic_add_black_24dp"
+            android:text="@string/my_list"
+            app:layout_constraintStart_toStartOf="@+id/activity_movie_text_view_desc"
+            app:layout_constraintTop_toBottomOf="@+id/activity_movie_text_view_desc" />
+
+        <Button
+            android:id="@+id/activity_movie_button_share"
+            style="@style/ButtonMovie"
+            android:layout_marginStart="8dp"
+            android:drawableTop="@drawable/ic_share_black_24dp"
+            android:text="@string/share"
+            app:layout_constraintStart_toEndOf="@+id/activity_movie_button_favorite"
+            app:layout_constraintTop_toBottomOf="@+id/activity_movie_text_view_desc" />
+
+        <Button
+            android:id="@+id/activity_movie_button_download"
+            style="@style/ButtonMovie"
+            android:layout_marginStart="8dp"
+            android:drawableTop="@drawable/ic_file_download_black_24dp"
+            android:text="@string/download"
+            app:layout_constraintStart_toEndOf="@+id/activity_movie_button_share"
+            app:layout_constraintTop_toBottomOf="@+id/activity_movie_text_view_desc" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_movie_recycler_view_similar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_movie_similar_movies"
+            tools:ignore="MissingConstraints"
+            tools:listitem="@layout/movie_item"/>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/activity_movie_progress_bar"
+            style="@style/SpinKitView.DoubleBounce"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_movie_image_view_play"
+            app:layout_constraintEnd_toEndOf="@+id/activity_movie_image_view_play"
+            app:layout_constraintStart_toStartOf="@+id/activity_movie_image_view_play"
+            app:layout_constraintTop_toTopOf="@+id/activity_movie_image_view_play"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

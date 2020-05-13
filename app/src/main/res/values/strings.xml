@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">HemersonsFlix</string>
+    <string name="search">Pesquisar</string>
+    <string name="my_list">Minha Lista</string>
+    <string name="share">Compartilhe</string>
+    <string name="download">Baixar</string>
+    <string name="similar_options">OPÇÕES SEMELHANTES</string>
+    <string name="failure_to_load_movies">Ops…Não foi possível carregar os filmes.</string>
+    <string name="movie_not_found">Ops…Filme não Encontrado.</string>
+    <string name="movies_not_found">Ops…Filmes não Encontrados.</string>
+    <string name="remove_from_list">Remover da Lista</string>
+    <string name="movie_removed_from_list">Filme removido da lista!</string>
+    <string name="movie_added_from_list">Filme adicionado a lista!</string>
+    <string name="in_development">Em desenvolvimento…</string>
+    <string name="empty_list">A sua lista está vazia</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/my_list_image_view_cover"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_background"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/my_list_text_view_movie_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:maxLines="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/my_list_image_view_cover"
+        app:layout_constraintTop_toTopOf="@+id/my_list_image_view_cover"
+        tools:ignore="MissingConstraints"
+        tools:text="Título do Filme" />
+
+    <ImageView
+        android:id="@+id/activity_movie_image_view_vote_average"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/my_list_text_view_movie_title"
+        app:layout_constraintTop_toBottomOf="@+id/my_list_text_view_movie_title"
+        app:srcCompat="@drawable/ic_star_24dp" />
+
+    <TextView
+        android:id="@+id/my_list_text_view_movie_nota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_movie_image_view_vote_average"
+        app:layout_constraintStart_toEndOf="@+id/activity_movie_image_view_vote_average"
+        app:layout_constraintTop_toTopOf="@+id/activity_movie_image_view_vote_average"
+        tools:ignore="MissingConstraints"
+        tools:text="7.5" />
+
+    <TextView
+        android:id="@+id/my_list_text_view_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="4"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/activity_movie_image_view_vote_average"
+        app:layout_constraintTop_toBottomOf="@+id/my_list_text_view_movie_nota"
+        tools:ignore="MissingConstraints"
+        tools:text="Descrição do filme" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
