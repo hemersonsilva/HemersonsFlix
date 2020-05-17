@@ -18,7 +18,6 @@
         <item name="android:minHeight">?attr/actionBarSize</item>
         <item name="android:theme">?attr/actionBarTheme</item>
         <item name="titleTextColor">@android:color/white</item>
-
     </style>
 
     <style name="RecyclerView">

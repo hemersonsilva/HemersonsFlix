@@ -15,9 +15,9 @@ import br.com.hemersonsilva.hemersonsflix.R
 import br.com.hemersonsilva.hemersonsflix.constants.MOVIE_KEY_ID
 import br.com.hemersonsilva.hemersonsflix.extensions.showMessage
 import br.com.hemersonsilva.hemersonsflix.model.Movie
+import br.com.hemersonsilva.hemersonsflix.repository.MovieRepository
 import br.com.hemersonsilva.hemersonsflix.ui.recyclerview.adapter.FavoriteAdapter
 import br.com.hemersonsilva.movies.database.AppDatabase
-import br.com.hemersonsilva.hemersonsflix.repository.MovieRepository
 import kotlinx.android.synthetic.main.activity_favorite.*
 import java.util.*
 
@@ -49,6 +49,7 @@ class FavoriteActivity : AppCompatActivity() {
         getInternalMovies()
         configOnSwipedRecyclerView()
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.favorite_menu, menu)
@@ -153,7 +154,7 @@ class FavoriteActivity : AppCompatActivity() {
         adapter.update(displayList)
     }
 
-    fun isEmpty(count: Int) {
+    private fun isEmpty(count: Int) {
         if (count == 0)
             activity_favorite_frame_layout.visibility = View.VISIBLE
         else

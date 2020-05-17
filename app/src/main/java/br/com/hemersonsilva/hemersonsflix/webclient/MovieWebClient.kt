@@ -79,4 +79,18 @@ class MovieWebClient(
             onComplete
         )
     }
+
+    fun searchMovies(
+        query: String,
+        onSuccess: (MovieResult?) -> Unit,
+        onFailure: (error: String?) -> Unit,
+        onComplete: () -> Unit
+    ) {
+        executeRequest(
+            service.searchMovies(query = query, apiKey = API_KEY, language = LANGUAGE),
+            onSuccess,
+            onFailure,
+            onComplete
+        )
+    }
 }

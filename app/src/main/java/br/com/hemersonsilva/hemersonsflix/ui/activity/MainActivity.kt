@@ -59,7 +59,8 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.main_search -> {
-                showMessage(getString(R.string.in_development))
+                //showMessage(getString(R.string.in_development))
+                startActivity(Intent(this, SearchActivity::class.java))
             }
         }
         return super.onOptionsItemSelected(item)

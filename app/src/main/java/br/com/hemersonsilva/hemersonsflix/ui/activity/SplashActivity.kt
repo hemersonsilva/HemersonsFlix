@@ -1,10 +1,10 @@
-package br.com.hemersonsilva.hemersonsflix
+package br.com.hemersonsilva.hemersonsflix.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import br.com.hemersonsilva.hemersonsflix.ui.activity.MainActivity
+import br.com.hemersonsilva.hemersonsflix.R
 
 class SplashActivity : AppCompatActivity(), Runnable {
 

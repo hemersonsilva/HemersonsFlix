@@ -17,7 +17,6 @@ class MovieRepository(
         onComplete: () -> Unit
     ) = getApi(page = page, onSuccess = onSuccess, onFailure = onFailure, onComplete = onComplete)
 
-
     private fun getApi(
         page: Int,
         onSuccess: (MovieResult?) -> Unit,
@@ -39,6 +38,12 @@ class MovieRepository(
         onComplete: () -> Unit
     ) = webclient.getSimilarMovies(movieId = movieId, onSuccess = onSuccess, onFailure = onFailure, onComplete = onComplete)
 
+    fun searchMovies(
+        query: String,
+        onSuccess: (MovieResult?) -> Unit,
+        onFailure: (error: String?) -> Unit,
+        onComplete: () -> Unit
+    ) = webclient.searchMovies(query = query, onSuccess = onSuccess, onFailure = onFailure, onComplete = onComplete)
 
     fun internalSave(
         movie: Movie,

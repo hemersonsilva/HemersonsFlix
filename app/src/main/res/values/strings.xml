@@ -13,4 +13,6 @@
     <string name="movie_added_from_list">Filme adicionado a lista!</string>
     <string name="in_development">Em desenvolvimento…</string>
     <string name="empty_list">A sua lista está vazia</string>
+    <string name="no_results_found">Nenhum resultado encontrado</string>
+    <string name="do_your_research">Faça Sua Pesquisa…</string>
 </resources>
