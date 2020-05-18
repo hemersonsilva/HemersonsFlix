@@ -22,9 +22,9 @@ class SearchAdapter(
         viewType: Int
     ): ViewHolder {
         val newView = LayoutInflater.from(context).inflate(
-                R.layout.movie_item,
-                parent, false
-            )
+            R.layout.movie_item,
+            parent, false
+        )
         return ViewHolder(newView)
     }
 
@@ -64,8 +64,10 @@ class SearchAdapter(
 
         fun binds(movie: Movie) {
             this.movie = movie
+
             Picasso.get().load(BASE_URL_POSTER_PATH + movie.posterPath)
                 .into(itemView.movie_item_poster_path)
+
         }
     }
 }

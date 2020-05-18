@@ -156,9 +156,9 @@ class FavoriteActivity : AppCompatActivity() {
 
     private fun isEmpty(count: Int) {
         if (count == 0)
-            activity_favorite_frame_layout.visibility = View.VISIBLE
+            activity_favorite_linear_layout_empty_list.visibility = View.VISIBLE
         else
-            activity_favorite_frame_layout.visibility = View.GONE
+            activity_favorite_linear_layout_empty_list.visibility = View.GONE
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -17,11 +17,7 @@
 
     <LinearLayout
         android:id="@+id/activity_search_linear_layout_search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:orientation="vertical"
+        style="@style/LinearLayoutMessage"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,20 +26,14 @@
 
         <ImageView
             android:id="@+id/activity_search_image_view"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
+            style="@style/ImageViewMessage"
             app:srcCompat="@drawable/ic_vader"
             tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/activity_search_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            style="@style/TextViewMessage"
             android:text="@string/do_your_research"
-            android:textAllCaps="true"
-            android:textColor="@color/colorGrayLight"
-            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
